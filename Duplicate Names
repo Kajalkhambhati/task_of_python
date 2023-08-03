@@ -1,0 +1,32 @@
+
+Write a function called check_duplicates that takes a list of 
+strings as an argument. The function should check if the list has 
+any duplicates. If there are duplicates, the function should return 
+the duplicates. If there are no duplicates, the function should 
+return "No duplicates". For example, the list of fruits below 
+should return apple as a duplicate and list of names should 
+return "no duplicates".
+fruits = ['apple', 'orange', 'banana', 'apple']
+names = ['Yoda', 'Moses', 'Joshua', 'Mark']
+
+def check_dublicates(list1):
+    
+    new_list=set(list1)
+
+    if len(list1)==len(new_list):
+        print("no duplicate")
+    else:
+    
+        blank_list=[]
+        for i in list1:
+            if list1.count(i)>1:
+                if i not in blank_list:
+                    blank_list.append(i)
+        return blank_list
+fruits=["apple","orange","banana","apple"]#ans:apple
+
+z=check_dublicates(fruits)
+print(z)
+
+name=["yoda","moses","jopshua","mark"]#ans:no dublicates
+y=check_dublicates(name)
